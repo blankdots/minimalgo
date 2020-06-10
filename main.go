@@ -1,25 +1,29 @@
 package main
 
 import (
-    "fmt"
-    "net/http"
-    "log"
+	"minimalgo/api"
+	"minimalgo/utils"
 
-    "github.com/julienschmidt/httprouter"
+	"github.com/gofiber/fiber"
+	log "github.com/sirupsen/logrus"
 )
 
-func Index(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
-    fmt.Fprint(w, "Welcome!\n")
-}
-
-func Hello(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
-    fmt.Fprintf(w, "hello, %s!\n", ps.ByName("name"))
+func init() {
+	utils.LogSettting()
 }
 
 func main() {
-    router := httprouter.New()
-    router.GET("/", Index)
-    router.GET("/hello/:name", Hello)
+	// Fiber instance
+	app := fiber.New()
 
-    log.Fatal(http.ListenAndServe(":8080", router))
+	// hello Handler
+	app.Get("/", api.Hello)
+
+	// 404 Handler
+	app.Use(func(c *fiber.Ctx) {
+		c.SendStatus(404) // => 404 "Not Found"
+	})
+
+	// Start server
+	log.Fatal(app.Listen(5430))
 }
