@@ -4,7 +4,6 @@ import (
 	"minimalgo/api"
 	"minimalgo/utils"
 
-	"github.com/gofiber/fiber"
 	log "github.com/sirupsen/logrus"
 )
 
@@ -13,17 +12,10 @@ func init() {
 }
 
 func main() {
-	// Fiber instance
-	app := fiber.New()
 
-	// hello Handler
-	app.Get("/health", api.Health)
-
-	// 404 Handler
-	app.Use(func(c *fiber.Ctx) {
-		c.SendStatus(404) // => 404 "Not Found"
-	})
+	app := api.Setup()
 
 	// Start server
 	log.Fatal(app.Listen(5430))
+
 }
