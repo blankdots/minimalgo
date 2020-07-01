@@ -6,6 +6,7 @@ import (
 	log "github.com/sirupsen/logrus"
 )
 
+// LogSettting configure logging
 func LogSettting() {
 	// Configure Log Text Formatter
 	log.SetFormatter(&log.TextFormatter{

@@ -17,7 +17,7 @@ func main() {
 	app := fiber.New()
 
 	// hello Handler
-	app.Get("/", api.Hello)
+	app.Get("/health", api.Health)
 
 	// 404 Handler
 	app.Use(func(c *fiber.Ctx) {

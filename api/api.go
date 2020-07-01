@@ -5,8 +5,9 @@ import (
 	log "github.com/sirupsen/logrus"
 )
 
-// Handler
-func Hello(c *fiber.Ctx) {
-	log.Info("something")
-	c.Send("Hello, World 👋!")
+// Health endpoint call
+func Health(c *fiber.Ctx) {
+	// Health endpoint call
+	log.Info("checking health endpoint")
+	c.Send("All is well 👋!")
 }
