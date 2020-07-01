@@ -69,6 +69,9 @@ func TestHealthRoute(t *testing.T) {
 		// Verify if the status code is as expected
 		assert.Equalf(t, test.expectedCode, res.StatusCode, test.description)
 
+		// response body close
+		defer res.Body.Close()
+
 		// Read the response body
 		body, err := ioutil.ReadAll(res.Body)
 
