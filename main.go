@@ -16,6 +16,6 @@ func main() {
 	app := api.Setup()
 
 	// Start server
-	log.Fatal(app.Listen(5430))
+	log.Fatal(app.Listen(":5430"))
 
 }
