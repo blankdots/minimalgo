@@ -4,7 +4,7 @@ go 1.14
 
 require (
 	github.com/andybalholm/brotli v1.0.1 // indirect
-	github.com/gofiber/fiber/v2 v2.6.0 // direct
+	github.com/gofiber/fiber/v2 v2.7.1 // direct
 	github.com/klauspost/compress v1.11.4 // indirect
 	github.com/kr/text v0.2.0 // indirect
 	github.com/sirupsen/logrus v1.8.1 // direct
