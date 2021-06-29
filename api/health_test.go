@@ -57,7 +57,7 @@ func TestHealthRoute(t *testing.T) {
 		// The -1 disables request latency.
 		res, err := app.Test(req, -1)
 
-		// verify that no error occured, that is not expected
+		// verify that no error occurred, that is not expected
 		assert.Equalf(t, test.expectedError, err != nil, test.description)
 
 		// As expected errors lead to broken responses, the next
@@ -79,7 +79,7 @@ func TestHealthRoute(t *testing.T) {
 		// the err variable should be nil
 		assert.Nilf(t, err, test.description)
 
-		// Verify, that the reponse body equals the expected body
+		// Verify, that the response body equals the expected body
 		assert.Equalf(t, test.expectedBody, string(body), test.description)
 	}
 }
