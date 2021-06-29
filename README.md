@@ -2,7 +2,7 @@
 
 ## Minimal Golang Project
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/neicnordic/sda-pipeline)](https://goreportcard.com/report/github.com/neicnordic/sda-pipeline)
+[![Go Report Card](https://goreportcard.com/badge/github.com/blankdots/minimalgo)](https://goreportcard.com/report/github.com/blankdots/minimalgo)
 ![Go Unit Tests](https://github.com/blankdots/minimalgo/workflows/Go/badge.svg)
 ![Go style check](https://github.com/blankdots/minimalgo/workflows/Multilinters/badge.svg)
 [![Coverage Status](https://coveralls.io/repos/github/blankdots/minimalgo/badge.svg?branch=master)](https://coveralls.io/github/blankdots/minimalgo?branch=master)
