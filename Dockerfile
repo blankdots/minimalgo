@@ -6,7 +6,7 @@ ADD . /build/
 
 WORKDIR /build 
 
-RUN go build -o minimalgo .
+RUN go build -buildvcs=false -o minimalgo .
 
 FROM scratch
 
