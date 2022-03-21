@@ -6,7 +6,7 @@ ADD . /build/
 
 WORKDIR /build 
 
-RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -ldflags '-extldflags "-static"' -o minimalgo .
+RUN go build -o minimalgo .
 
 FROM scratch
 
