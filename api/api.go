@@ -9,6 +9,7 @@ import (
 func Health(c *fiber.Ctx) error {
 	// Health endpoint call
 	log.Info("checking health endpoint")
+
 	return c.SendString("All is well 👋!")
 }
 

@@ -1,7 +1,7 @@
 package api
 
 import (
-	"io/ioutil"
+	"io"
 	"net/http"
 	"testing"
 
@@ -73,7 +73,7 @@ func TestHealthRoute(t *testing.T) {
 		defer res.Body.Close()
 
 		// Read the response body
-		body, err := ioutil.ReadAll(res.Body)
+		body, err := io.ReadAll(res.Body)
 
 		// Reading the response body should work everytime, such that
 		// the err variable should be nil
