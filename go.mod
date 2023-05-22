@@ -4,7 +4,7 @@ go 1.20
 
 require (
 	github.com/gofiber/fiber/v2 v2.45.0 // direct
-	github.com/sirupsen/logrus v1.9.0 // direct
+	github.com/sirupsen/logrus v1.9.2 // direct
 	github.com/stretchr/testify v1.8.2
 )
 
