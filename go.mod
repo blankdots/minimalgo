@@ -3,7 +3,7 @@ module minimalgo
 go 1.20
 
 require (
-	github.com/gofiber/fiber/v2 v2.52.0 // direct
+	github.com/gofiber/fiber/v2 v2.52.1 // direct
 	github.com/sirupsen/logrus v1.9.3 // direct
 	github.com/stretchr/testify v1.8.4
 )
