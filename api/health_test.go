@@ -70,7 +70,7 @@ func TestHealthRoute(t *testing.T) {
 		assert.Equalf(t, test.expectedCode, res.StatusCode, test.description)
 
 		// response body close
-		defer res.Body.Close()
+		defer func() { _ = res.Body.Close() }()
 
 		// Read the response body
 		body, err := io.ReadAll(res.Body)
