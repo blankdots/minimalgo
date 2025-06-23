@@ -5,7 +5,7 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/blankdots/minimalgo)](https://goreportcard.com/report/github.com/blankdots/minimalgo)
 ![Go Unit Tests](https://github.com/blankdots/minimalgo/workflows/Go/badge.svg)
 ![Go style check](https://github.com/blankdots/minimalgo/workflows/Multilinters/badge.svg)
-[![Coverage Status](https://coveralls.io/repos/github/blankdots/minimalgo/badge.svg?branch=master)](https://coveralls.io/github/blankdots/minimalgo?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/blankdots/minimalgo/badge.svg?branch=main)](https://coveralls.io/github/blankdots/minimalgo?branch=main)
 
 An example of a minimal Golang project that contains an web application built with [fiber](https://github.com/gofiber/fiber).
 
