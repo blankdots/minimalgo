@@ -10,7 +10,7 @@ RUN go build -buildvcs=false -o minimalgo .
 
 FROM scratch
 
-LABEL maintainer "blankdots"
+LABEL maintainer="blankdots"
 LABEL org.label-schema.schema-version="1.0"
 LABEL org.label-schema.vcs-url="https://github.com/blankdots/minimalgo"
 
