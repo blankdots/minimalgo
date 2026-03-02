@@ -1,12 +1,12 @@
 package api
 
 import (
-	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/fiber/v3"
 	log "github.com/sirupsen/logrus"
 )
 
 // Health endpoint call
-func Health(c *fiber.Ctx) error {
+func Health(c fiber.Ctx) error {
 	// Health endpoint call
 	log.Info("checking health endpoint")
 
@@ -22,7 +22,7 @@ func Setup() *fiber.App {
 	app.Get("/health", Health)
 
 	// 404 Handler
-	app.Use(func(c *fiber.Ctx) error {
+	app.Use(func(c fiber.Ctx) error {
 		return c.SendStatus(404) // => 404 "Not Found"
 	})
 
